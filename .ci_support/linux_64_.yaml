@@ -13,7 +13,7 @@ docker_image:
 fmt:
 - '8'
 grpc_cpp:
-- '1.40'
+- '1.42'
 spdlog:
 - '1.9'
 target_platform:
