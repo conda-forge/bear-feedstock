@@ -1,5 +1,5 @@
 {% set name = "bear" %}
-{% set version = "3.0.17" %}
+{% set version = "3.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/rizsotto/Bear/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 107f94e045d930e88f5f5b4b484c8df1bf4834722943525765c271e0b5b34b78
+  sha256: ae94047c79b4f48462b66981f66a67b6a833d75d4c40e7afead491b1865f1142
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -31,18 +31,17 @@ requirements:
     - libprotobuf
 
 test:
-  commands:
-    test -f ${PREFIX}/bin/bear
+  commands: test -f ${PREFIX}/bin/bear
 
 about:
   home: https://github.com/rizsotto/Bear
-  license: GPL-3.0-only 
+  license: GPL-3.0-only
   license_file: COPYING
-  summary: 'Bear is a tool that generates a compilation database for clang tooling.'
+  summary: Bear is a tool that generates a compilation database for clang tooling.
   description:
   doc_url:
   dev_url:
 
 extra:
   recipe-maintainers:
-    - mwittgen 
+    - mwittgen
