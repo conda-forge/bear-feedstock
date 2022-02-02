@@ -15,13 +15,14 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make
     - pkg-config
 
   host:
-    - grpc-cpp
+    - grpc-cpp  {{ grpc_cpp }}
     - spdlog
     - nlohmann_json
 
@@ -30,7 +31,9 @@ requirements:
     - libprotobuf
 
 test:
-  commands: test -f ${PREFIX}/bin/bear
+  commands:
+    - test -f ${PREFIX}/bin/bear
+    - bear -- test -d .
 
 about:
   home: https://github.com/rizsotto/Bear
