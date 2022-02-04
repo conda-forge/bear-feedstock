@@ -27,7 +27,6 @@ requirements:
     - nlohmann_json
 
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx]
     - libprotobuf
 
 test:
