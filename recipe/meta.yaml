@@ -20,6 +20,7 @@ requirements:
     - cmake
     - make
     - pkg-config
+    - grpc-cpp  {{ grpc_cpp }}
 
   host:
     - grpc-cpp  {{ grpc_cpp }}
