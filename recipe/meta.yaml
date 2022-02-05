@@ -10,28 +10,31 @@ source:
   sha256: ae94047c79b4f48462b66981f66a67b6a833d75d4c40e7afead491b1865f1142
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - make
     - pkg-config
+    - grpc-cpp  {{ grpc_cpp }}
 
   host:
-    - grpc-cpp
-    - fmt
+    - grpc-cpp  {{ grpc_cpp }}
     - spdlog
     - nlohmann_json
 
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx]
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
     - libprotobuf
 
 test:
-  commands: test -f ${PREFIX}/bin/bear
+  commands:
+    - test -f ${PREFIX}/bin/bear
+    - bear -- test -d .
 
 about:
   home: https://github.com/rizsotto/Bear
