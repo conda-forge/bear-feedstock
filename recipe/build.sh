@@ -4,11 +4,9 @@ set -e
 mkdir build
 cd build
 
-cmake -E env CXXFLAGS="${CXXFLAGS}" \
+cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
 cmake .. ${CMAKE_ARGS} \
       -DENABLE_UNIT_TESTS=OFF \
-      -DENABLE_FUNC_TESTS=OFF \
-      -DCMAKE_INSTALL_PREFIX=${PREFIX} \
-      -DCMAKE_PREFIX_PATH=${PREFIX}
+      -DENABLE_FUNC_TESTS=OFF
 
 cmake --build . --target install
