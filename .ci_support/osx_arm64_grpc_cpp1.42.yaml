@@ -27,3 +27,9 @@ zip_keys:
 CONDA_BUILD_SYSROOT:
 - /opt/MacOSX11.0.sdk
 
+build_platform:
+- osx-64
+
+CONDA_BUILD_SYSROOT:
+- /opt/MacOSX11.0.sdk
+
