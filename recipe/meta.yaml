@@ -22,9 +22,9 @@ requirements:
     - pkg-config
 
   host:
+    - grpc-cpp  {{ grpc_cpp }}
     - spdlog
     - nlohmann_json
-    - gprc-cpp  {{ gprc_cpp }}
 
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
