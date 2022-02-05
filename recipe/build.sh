@@ -2,6 +2,9 @@
 set -e
 set -x
 
+echo $(which protoc)
+echo $(file $(which protoc))
+
 mkdir build
 cd build
 
