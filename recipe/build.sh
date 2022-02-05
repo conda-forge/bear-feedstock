@@ -2,6 +2,7 @@
 set -e
 set -x
 
+echo $(uname -a)
 echo $(which protoc)
 echo $(file $(which protoc))
 
