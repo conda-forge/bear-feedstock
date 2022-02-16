@@ -8,22 +8,22 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_grpc_cpp1.42:
-        CONFIG: linux_64_grpc_cpp1.42
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_grpc_cpp1.43:
         CONFIG: linux_64_grpc_cpp1.43
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_grpc_cpp1.42:
-        CONFIG: linux_aarch64_grpc_cpp1.42
+      linux_64_grpc_cpp1.44:
+        CONFIG: linux_64_grpc_cpp1.44
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_grpc_cpp1.43:
         CONFIG: linux_aarch64_grpc_cpp1.43
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_grpc_cpp1.44:
+        CONFIG: linux_aarch64_grpc_cpp1.44
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
 
   steps:
