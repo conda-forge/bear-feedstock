@@ -27,59 +27,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_grpc_cpp1.45</td>
+              <td>linux_64_grpc_cpp1.43</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_64_grpc_cpp1.45" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_64_grpc_cpp1.43" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_grpc_cpp1.46</td>
+              <td>linux_64_grpc_cpp1.47</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_64_grpc_cpp1.46" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_64_grpc_cpp1.47" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_grpc_cpp1.45</td>
+              <td>linux_aarch64_grpc_cpp1.43</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_grpc_cpp1.45" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_grpc_cpp1.43" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_grpc_cpp1.46</td>
+              <td>linux_aarch64_grpc_cpp1.47</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_grpc_cpp1.46" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux_aarch64_grpc_cpp1.47" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_grpc_cpp1.45</td>
+              <td>osx_64_grpc_cpp1.43</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_64_grpc_cpp1.45" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_64_grpc_cpp1.43" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_grpc_cpp1.46</td>
+              <td>osx_64_grpc_cpp1.47</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_64_grpc_cpp1.46" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_64_grpc_cpp1.47" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_grpc_cpp1.45</td>
+              <td>osx_arm64_grpc_cpp1.43</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_grpc_cpp1.45" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_grpc_cpp1.43" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_grpc_cpp1.46</td>
+              <td>osx_arm64_grpc_cpp1.47</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_grpc_cpp1.46" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx_arm64_grpc_cpp1.47" alt="variant">
                 </a>
               </td>
             </tr>

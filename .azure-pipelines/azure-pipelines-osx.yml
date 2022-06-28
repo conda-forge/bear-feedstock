@@ -8,17 +8,17 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_grpc_cpp1.45:
-        CONFIG: osx_64_grpc_cpp1.45
+      osx_64_grpc_cpp1.43:
+        CONFIG: osx_64_grpc_cpp1.43
         UPLOAD_PACKAGES: 'True'
-      osx_64_grpc_cpp1.46:
-        CONFIG: osx_64_grpc_cpp1.46
+      osx_64_grpc_cpp1.47:
+        CONFIG: osx_64_grpc_cpp1.47
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_grpc_cpp1.45:
-        CONFIG: osx_arm64_grpc_cpp1.45
+      osx_arm64_grpc_cpp1.43:
+        CONFIG: osx_arm64_grpc_cpp1.43
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_grpc_cpp1.46:
-        CONFIG: osx_arm64_grpc_cpp1.46
+      osx_arm64_grpc_cpp1.47:
+        CONFIG: osx_arm64_grpc_cpp1.47
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
