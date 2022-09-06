@@ -10,8 +10,10 @@ if [[ "${target_platform}" == "osx-arm64" ]]; then
 fi
  
 cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
-cmake .. ${CMAKE_ARGS} \
-      -DENABLE_UNIT_TESTS=OFF \
-      -DENABLE_FUNC_TESTS=OFF
+cmake ${CMAKE_ARGS} \
+    -G Ninja \
+    -DENABLE_UNIT_TESTS=OFF \
+    -DENABLE_FUNC_TESTS=OFF \
+    ..
 
 cmake --build . --target install
