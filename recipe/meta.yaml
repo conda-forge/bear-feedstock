@@ -19,10 +19,10 @@ requirements:
     - cmake
     - ninja
     - pkg-config
-    - grpc-cpp  {{ grpc_cpp }}
+    - libgrpc
 
   host:
-    - grpc-cpp  {{ grpc_cpp }}
+    - libgrpc
     - spdlog
     - nlohmann_json
 
