@@ -18,10 +18,10 @@ cxx_compiler_version:
 - '10'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
-grpc_cpp:
+libgrpc:
 - '1.49'
 spdlog:
-- '1.10'
+- '1.11'
 target_platform:
 - linux-aarch64
 zip_keys:
