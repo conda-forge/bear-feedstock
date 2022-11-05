@@ -12,12 +12,12 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '14'
-grpc_cpp:
+libgrpc:
 - '1.49'
 macos_machine:
 - arm64-apple-darwin20.0.0
 spdlog:
-- '1.10'
+- '1.11'
 target_platform:
 - osx-arm64
 zip_keys:
