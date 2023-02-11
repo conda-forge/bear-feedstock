@@ -1,4 +1,4 @@
-{% set version = "3.0.21" %}
+{% set version = "3.1.0" %}
 
 package:
   name: bear
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/rizsotto/Bear/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 0c949a6a907bc61a1284661f8d9dab1788a62770c265f6142602669b6e5c389d
+  sha256: 33c1f4663d94508f11cbd999dd5571359be7d15b0f473f7cfbea2c0b3190a891
 
 build:
   number: 0
