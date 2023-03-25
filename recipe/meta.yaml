@@ -16,7 +16,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake 3.25.2
+    - cmake
     - ninja
     - pkg-config
     - libgrpc
