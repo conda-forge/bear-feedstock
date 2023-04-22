@@ -1,11 +1,11 @@
-About bear
-==========
+About bear-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bear-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rizsotto/Bear
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bear-feedstock/blob/main/LICENSE.txt)
 
 Summary: Bear is a tool that generates a compilation database for clang tooling.
 
