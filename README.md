@@ -1,11 +1,11 @@
-About bear
-==========
+About bear-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bear-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rizsotto/Bear
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bear-feedstock/blob/main/LICENSE.txt)
 
 Summary: Bear is a tool that generates a compilation database for clang tooling.
 
@@ -27,31 +27,59 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
+              <td>linux_64_libgrpc1.54</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_libgrpc1.54" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64</td>
+              <td>linux_64_libgrpc1.55</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_libgrpc1.55" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64</td>
+              <td>linux_aarch64_libgrpc1.54</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_libgrpc1.54" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64</td>
+              <td>linux_aarch64_libgrpc1.55</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_libgrpc1.55" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgrpc1.54</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgrpc1.54" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_libgrpc1.55</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_libgrpc1.55" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgrpc1.54</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgrpc1.54" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_libgrpc1.55</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_libgrpc1.55" alt="variant">
                 </a>
               </td>
             </tr>
