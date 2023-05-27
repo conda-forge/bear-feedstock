@@ -1,0 +1,28 @@
+From 2895d97f02f479609e2311f84e2914460bb9b9c9 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Sun, 28 May 2023 01:16:38 +1100
+Subject: [PATCH 3/3] remove some unhelpful arguments from build re-exec
+
+---
+ CMakeLists.txt | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 30bdeb5..74a1c8f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -68,14 +68,10 @@ ExternalProject_Add(BearSource
+             -DCMAKE_CXX_COMPILER_TARGET:STRING=${CMAKE_CXX_COMPILER_TARGET}
+             -DCMAKE_CXX_STANDARD:STRING=${CMAKE_CXX_STANDARD}
+             -DCMAKE_CXX_STANDARD_REQUIRED:BOOL=${CMAKE_CXX_STANDARD_REQUIRED}
+-            -DCMAKE_CXX_EXTENSIONS:BOOL=${CMAKE_CXX_EXTENSIONS}
+             -DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS}
+             -DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH}
+             -DCMAKE_INSTALL_PREFIX:PATH=${STAGED_INSTALL_PREFIX}
+             -DCMAKE_INSTALL_LIBDIR:PATH=${CMAKE_INSTALL_LIBDIR}
+-            -DCMAKE_EXE_LINKER_FLAGS:STRING=${CMAKE_EXE_LINKER_FLAGS}
+-            -DCMAKE_SHARED_LINKER_FLAGS:STRING=${CMAKE_SHARED_LINKER_FLAGS}
+-            -DCMAKE_MODULE_LINKER_FLAGS:STRING=${CMAKE_MODULE_LINKER_FLAGS}
+             -DROOT_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+             ${CMAKE_CACHE_ARGS_EXTRA}
+         TEST_BEFORE_INSTALL
