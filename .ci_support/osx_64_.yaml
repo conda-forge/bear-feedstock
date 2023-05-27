@@ -14,8 +14,12 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '15'
+fmt:
+- '9'
+libabseil:
+- '20230125'
 libgrpc:
-- '1.51'
+- '1.54'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 spdlog:
