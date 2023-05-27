@@ -1,0 +1,21 @@
+From d6617136e6b7469b0e63a3ad4a0260ea26207b04 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Sat, 27 May 2023 22:45:34 +1100
+Subject: [PATCH] remove arch overspecification that causes errors
+
+---
+ source/intercept/CMakeLists.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/source/intercept/CMakeLists.txt b/source/intercept/CMakeLists.txt
+index 187101a..5d6c419 100644
+--- a/source/intercept/CMakeLists.txt
++++ b/source/intercept/CMakeLists.txt
+@@ -169,7 +169,6 @@ if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+ elseif (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+     set_target_properties(exec PROPERTIES
+             LINKER_LANGUAGE "CXX"
+-            OSX_ARCHITECTURES:STRING "i386;x86_64"
+             MACOSX_RPATH:BOOL ON
+             )
+ endif ()
