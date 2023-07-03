@@ -8,8 +8,7 @@ if [[ "${target_platform}" == "osx-arm64" ]]; then
     sed -ie "s;\${_PROTOBUF_PROTOC};${BUILD_PREFIX}/bin/protoc;g"  ../source/intercept/proto/CMakeLists.txt
 fi
 
-export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
-
+cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
 cmake ${CMAKE_ARGS} \
     -G Ninja \
     -DCMAKE_CXX_STANDARD=17 \
