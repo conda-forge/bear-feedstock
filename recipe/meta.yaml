@@ -9,8 +9,7 @@ source:
   sha256: 5f94e98480bd8576a64cd1d59649f34b09b4e02a81f1d983c92af1113e061fc3
   patches:
     - patches/0001-remove-arch-overspecification-that-causes-errors.patch
-    - patches/0002-don-t-pin-find_package-fmt-nor-swallow-logs.patch
-    # - patches/0003-remove-some-unhelpful-arguments-from-build-re-exec.patch
+    - patches/0002-don-t-re-exec-in-CMake-just-build-directly.patch
 
 build:
   number: 0
