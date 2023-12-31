@@ -27,6 +27,12 @@ requirements:
     - nlohmann_json
     - fmt
     - libprotobuf
+  run:
+    - libgrpc
+    - spdlog
+    - nlohmann_json
+    - fmt
+    - libprotobuf
 
 test:
   commands:
