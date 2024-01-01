@@ -21,6 +21,7 @@ requirements:
     - pkg-config
     - protobuf
     - zlib
+    - libgrpc 
 
   host:
     - libgrpc
