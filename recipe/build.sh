@@ -4,7 +4,9 @@ set -x
 
 mkdir build
 cd build
+uname -a
 export PKG_CONFIG_PATH=${CONDA_PREFIX}/lib/pkgconfig
+file $(which protoc)
 cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
 cmake ${CMAKE_ARGS} \
     -G Ninja \
