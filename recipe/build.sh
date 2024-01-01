@@ -7,7 +7,7 @@ cd build
 
 pkg-config  grpc++ --libs
 pkg-config  zlib --libs
- 
+export PKG_CONFIG_PATH=${CONDA_PREFIX}/lib/pkgconfig
 cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
 cmake ${CMAKE_ARGS} \
     -G Ninja \
