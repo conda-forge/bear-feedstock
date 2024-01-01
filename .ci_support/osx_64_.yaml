@@ -14,8 +14,12 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '16'
+fmt:
+- '9'
 libgrpc:
 - '1.58'
+libprotobuf:
+- 4.24.3
 macos_machine:
 - x86_64-apple-darwin13.4.0
 spdlog:
@@ -25,3 +29,7 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - libgrpc
+  - libprotobuf
+zlib:
+- '1.2'
