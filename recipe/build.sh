@@ -4,6 +4,9 @@ set -x
 
 mkdir build
 cd build
+
+pkg-config  grpc++ --libs
+pkg-config  zlib --libs
  
 cmake -E env CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY" \
 cmake ${CMAKE_ARGS} \
