@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.1.4" %}
 
 package:
   name: bear
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/rizsotto/Bear/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 33c1f4663d94508f11cbd999dd5571359be7d15b0f473f7cfbea2c0b3190a891
+  sha256: a1105023795b3e1b9abc29c088cdec5464cc9f3b640b5078dc90a505498da5ff
 
 build:
   number: 0
@@ -15,6 +15,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cmake
     - ninja
@@ -27,7 +28,6 @@ requirements:
     - nlohmann_json
 
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
     - libprotobuf
 
 test:
