@@ -1,0 +1,66 @@
+From e5324f85b15ecff0ed21aa104e01d3cd2023fa88 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Mon, 3 Jul 2023 18:07:24 +1100
+Subject: [PATCH 2/2] don't re-exec in CMake; just build directly
+
+---
+ CMakeLists.txt | 43 +------------------------------------------
+ 1 file changed, 1 insertion(+), 42 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 30bdeb5..008d8f4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -41,48 +41,7 @@ if (CMAKE_PROJECT_INCLUDE AND NOT CMAKE_PROJECT_INCLUDE STREQUAL "")
+ endif()
+ 
+ # Build the project itself
+-ExternalProject_Add(BearSource
+-        SOURCE_DIR
+-            "${CMAKE_CURRENT_SOURCE_DIR}/source"
+-        DEPENDS
+-            nlohmann_json_dependency
+-            fmt_dependency
+-            spdlog_dependency
+-            grpc_dependency
+-            googletest_dependency
+-        CMAKE_ARGS
+-            -DENABLE_UNIT_TESTS:BOOL=${ENABLE_UNIT_TESTS}
+-            -DENABLE_MULTILIB:BOOL=${ENABLE_MULTILIB}
+-            -DPKG_CONFIG_EXECUTABLE:PATH=${PKG_CONFIG_EXECUTABLE}
+-        CMAKE_CACHE_ARGS
+-            -DCMAKE_PROJECT_VERSION:STRING=${CMAKE_PROJECT_VERSION}
+-            -DCMAKE_BUILD_TYPE:STRING=${CMAKE_BUILD_TYPE}
+-            -DCMAKE_TOOLCHAIN_FILE:PATH=${CMAKE_TOOLCHAIN_FILE}
+-            -DCMAKE_FIND_ROOT_PATH:PATH=${CMAKE_FIND_ROOT_PATH}
+-            -DCMAKE_IGNORE_PATH:PATH=${CMAKE_IGNORE_PATH}
+-            -DCMAKE_SYSROOT:PATH=${CMAKE_SYSROOT}
+-            -DCMAKE_C_COMPILER:STRING=${CMAKE_C_COMPILER}
+-            -DCMAKE_C_COMPILER_TARGET:STRING=${CMAKE_C_COMPILER_TARGET}
+-            -DCMAKE_C_FLAGS:STRING=${CMAKE_C_FLAGS}
+-            -DCMAKE_CXX_COMPILER:STRING=${CMAKE_CXX_COMPILER}
+-            -DCMAKE_CXX_COMPILER_TARGET:STRING=${CMAKE_CXX_COMPILER_TARGET}
+-            -DCMAKE_CXX_STANDARD:STRING=${CMAKE_CXX_STANDARD}
+-            -DCMAKE_CXX_STANDARD_REQUIRED:BOOL=${CMAKE_CXX_STANDARD_REQUIRED}
+-            -DCMAKE_CXX_EXTENSIONS:BOOL=${CMAKE_CXX_EXTENSIONS}
+-            -DCMAKE_CXX_FLAGS:STRING=${CMAKE_CXX_FLAGS}
+-            -DCMAKE_PREFIX_PATH:PATH=${CMAKE_PREFIX_PATH}
+-            -DCMAKE_INSTALL_PREFIX:PATH=${STAGED_INSTALL_PREFIX}
+-            -DCMAKE_INSTALL_LIBDIR:PATH=${CMAKE_INSTALL_LIBDIR}
+-            -DCMAKE_EXE_LINKER_FLAGS:STRING=${CMAKE_EXE_LINKER_FLAGS}
+-            -DCMAKE_SHARED_LINKER_FLAGS:STRING=${CMAKE_SHARED_LINKER_FLAGS}
+-            -DCMAKE_MODULE_LINKER_FLAGS:STRING=${CMAKE_MODULE_LINKER_FLAGS}
+-            -DROOT_INSTALL_PREFIX:PATH=${CMAKE_INSTALL_PREFIX}
+-            ${CMAKE_CACHE_ARGS_EXTRA}
+-        TEST_BEFORE_INSTALL
+-            1
+-        TEST_COMMAND
+-            ctest # or `ctest -T memcheck`
+-        )
++add_subdirectory(source)
+ 
+ # Run the functional tests
+ if (ENABLE_FUNC_TESTS)
+-- 
+2.40.1.windows.1
+
