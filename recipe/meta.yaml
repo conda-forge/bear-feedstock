@@ -25,10 +25,12 @@ requirements:
     - libgrpc
     - spdlog
     - nlohmann_json
+    - libabseil ==20220623.*
 
   run:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
     - libprotobuf
+    - libabseil ==20220623.*
 
 test:
   commands:
