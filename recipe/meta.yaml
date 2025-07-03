@@ -1,4 +1,4 @@
-{% set version = "3.1.0" %}
+{% set version = "3.1.6" %}
 
 package:
   name: bear
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/rizsotto/Bear/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 33c1f4663d94508f11cbd999dd5571359be7d15b0f473f7cfbea2c0b3190a891
+  sha256: 99cd891eec6e89b734d7cafe0e623dd8c2f27d8cbf3ee9bc4807e69e5c8fb55c
 
 build:
   number: 0
@@ -16,18 +16,19 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - cmake
     - ninja
     - pkg-config
-    - libgrpc
+    - libgrpc  # [build_platform != target_platform]
 
   host:
     - libgrpc
+    - zlib
     - spdlog
     - nlohmann_json
 
   run:
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.12") }}  # [osx and x86_64]
     - libprotobuf
 
 test:
@@ -48,3 +49,4 @@ extra:
   recipe-maintainers:
     - mwittgen
     - h-vetinari
+    - lindsayad
