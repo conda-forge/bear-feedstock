@@ -21,15 +21,16 @@ requirements:
     - ninja
     - pkg-config
     - libgrpc
+    - zlib
 
   host:
     - libgrpc
+    - zlib
     - spdlog
     - nlohmann_json
 
   run:
     - libprotobuf
-    - libgrpc
 
 test:
   commands:
