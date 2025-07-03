@@ -20,7 +20,7 @@ requirements:
     - cmake
     - ninja
     - pkg-config
-    - libgrpc
+    - libgrpc  # [build_platform != target_platform]
 
   host:
     - libgrpc
