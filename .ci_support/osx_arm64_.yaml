@@ -23,7 +23,7 @@ libgrpc:
 macos_machine:
 - arm64-apple-darwin20.0.0
 spdlog:
-- '1.14'
+- '1.15'
 target_platform:
 - osx-arm64
 zip_keys:
