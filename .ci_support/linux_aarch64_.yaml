@@ -21,7 +21,7 @@ docker_image:
 libgrpc:
 - '1.71'
 spdlog:
-- '1.14'
+- '1.15'
 target_platform:
 - linux-aarch64
 zip_keys:
