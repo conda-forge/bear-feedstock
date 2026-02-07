@@ -17,7 +17,7 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 libgrpc:
-- '1.73'
+- '1.78'
 spdlog:
 - '1.17'
 target_platform:
