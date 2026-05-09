@@ -49,6 +49,8 @@ requirements:
     - ${{ compiler("rust") }}
     - cargo-auditable
     - cargo-bundle-licenses
+    - if: linux
+      then: lld
 
 tests:
   - package_contents:
