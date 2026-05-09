@@ -19,9 +19,9 @@ build:
     - if: win
       then: |
         if not exist %LIBRARY_PREFIX%\libexec\bear\bin mkdir %LIBRARY_PREFIX%\libexec\bear\bin
-        echo F | xcopy target\release\bear-driver.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-driver.exe /F /Y
+        echo F | xcopy target\%CARGO_BUILD_TARGET%\release\bear-driver.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-driver.exe /F /Y
         if %ERRORLEVEL% neq 0 exit 1
-        echo F | xcopy target\release\bear-wrapper.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-wrapper.exe /F /Y
+        echo F | xcopy target\%CARGO_BUILD_TARGET%\release\bear-wrapper.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-wrapper.exe /F /Y
         if %ERRORLEVEL% neq 0 exit 1
         if not exist %LIBRARY_PREFIX%\share\man mkdir %LIBRARY_PREFIX%\share\man
         echo F | xcopy man\bear.1 %LIBRARY_PREFIX%\share\man\bear.1 /F /Y
