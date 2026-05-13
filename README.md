@@ -5,9 +5,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bear-feedstock/
 
 Home: https://github.com/rizsotto/Bear
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
-Summary: Bear is a tool that generates a compilation database for clang tooling.
+Summary: A tool that generates a compilation database for clang tooling
+
+Development: https://github.com/rizsotto/Bear
+
+A tool that generates a compilation database for clang tooling.
 
 Current build status
 ====================
@@ -52,6 +56,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14698&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bear-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -183,6 +201,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@chawyehsu](https://github.com/chawyehsu/)
 * [@h-vetinari](https://github.com/h-vetinari/)
 * [@lindsayad](https://github.com/lindsayad/)
 * [@mwittgen](https://github.com/mwittgen/)

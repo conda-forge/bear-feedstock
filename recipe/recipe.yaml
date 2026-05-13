@@ -1,0 +1,98 @@
+schema_version: 1
+
+context:
+  name: bear
+  version: "4.1.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  - url: https://github.com/rizsotto/Bear/archive/refs/tags/${{ version }}.tar.gz
+    sha256: 87a5b385b01000a3ae2c69f535384dca33da7f23925a523ba177f98b1bb7f301
+
+build:
+  number: 0
+  script:
+    - cargo auditable build --release --locked
+    - if: win
+      then: |
+        if not exist %LIBRARY_PREFIX%\libexec\bear\bin mkdir %LIBRARY_PREFIX%\libexec\bear\bin
+        echo F | xcopy target\%CARGO_BUILD_TARGET%\release\bear-driver.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-driver.exe /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+        echo F | xcopy target\%CARGO_BUILD_TARGET%\release\bear-wrapper.exe %LIBRARY_PREFIX%\libexec\bear\bin\bear-wrapper.exe /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+        if not exist %LIBRARY_PREFIX%\share\man mkdir %LIBRARY_PREFIX%\share\man
+        echo F | xcopy man\bear.1 %LIBRARY_PREFIX%\share\man\bear.1 /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+        if not exist %LIBRARY_PREFIX%\share\doc\bear mkdir %LIBRARY_PREFIX%\share\doc\bear
+        echo F | xcopy README.md %LIBRARY_PREFIX%\share\doc\bear\README.md /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+        echo F | xcopy COPYING %LIBRARY_PREFIX%\share\doc\bear\COPYING /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+        if not exist %LIBRARY_BIN% mkdir %LIBRARY_BIN%
+        echo F | xcopy %RECIPE_DIR%\bear.cmd %LIBRARY_BIN%\bear.cmd /F /Y
+        if %ERRORLEVEL% neq 0 exit 1
+      else: |
+        rm -rf target/release
+        mv target/${CARGO_BUILD_TARGET}/release target/release
+        unset CARGO_BUILD_TARGET
+        cargo run --bin generate-completions target/release/completions --target ${BUILD}
+        PREFIX=$PREFIX scripts/install.sh
+        cp $RECIPE_DIR/bear.sh $PREFIX/bin/bear
+        chmod +x $PREFIX/bin/bear
+    - cargo-bundle-licenses --format yaml --output ./THIRDPARTY.yml
+
+requirements:
+  build:
+    - ${{ compiler("rust") }}
+    - cargo-auditable
+    - cargo-bundle-licenses
+    - if: linux
+      then: lld
+
+tests:
+  - package_contents:
+      bin:
+        - bear
+      files:
+        - if: win
+          then:
+            - Library\libexec\bear\bin\bear-driver.exe
+            - Library\libexec\bear\bin\bear-wrapper.exe
+          else:
+            - libexec/bear/bin/bear-driver
+            - libexec/bear/bin/bear-wrapper
+        - if: osx
+          then: libexec/bear/lib/libexec.dylib
+        - if: linux
+          then: libexec/bear/lib/libexec.so
+  - if: build_platform == target_platform
+    then:
+      script:
+        - bear -V
+        - bear -- make --version
+        - if: win
+          then: type compile_commands.json
+          else: test -f compile_commands.json
+      requirements:
+        run:
+          - make
+
+about:
+  homepage: https://github.com/rizsotto/Bear
+  license: GPL-3.0-or-later
+  license_file:
+    - COPYING
+    - THIRDPARTY.yml
+  summary: A tool that generates a compilation database for clang tooling
+  description: A tool that generates a compilation database for clang tooling.
+  repository: https://github.com/rizsotto/Bear
+
+extra:
+  recipe-maintainers:
+    - chawyehsu
+    - mwittgen
+    - h-vetinari
+    - lindsayad
