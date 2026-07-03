@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bear
-  version: "4.1.4"
+  version: "4.1.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://github.com/rizsotto/Bear/archive/refs/tags/${{ version }}.tar.gz
-    sha256: 1fd74a9d3c8cc05dd6651d17ab17fca25e62bc92c7739e6ae3260729788d3c58
+    sha256: 164e93b54c31a37abd0eddd9e300894b4113eec70dc70ec4c9b8ad7bbe1aab24
 
 build:
   number: 0
